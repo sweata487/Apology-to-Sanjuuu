@@ -1,22 +1,20 @@
 document.getElementById('forgiveBtn').addEventListener('click', function() {
     const responseMessage = document.getElementById('responseMessage');
     const messages = [
-        "Thank you so much! 💙",
-        "Your forgiveness means everything to me 💖",
-        "I promise to be a better friend 💕",
-        "You're the best, Sanjuuu! 💗"
+        'Thank you so much! 💙',
+        'Your forgiveness means everything to me 💖',
+        'I promise to be a better friend 💕',
+        'You\'re the best, Sanjuuu! 💗'
     ];
     
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     responseMessage.textContent = randomMessage;
     
-    // Add some visual feedback
     this.style.transform = 'scale(0.95)';
     setTimeout(() => {
         this.style.transform = 'scale(1)';
     }, 100);
     
-    // Create celebration hearts
     createCelebrationHearts();
 });
 
@@ -39,7 +37,6 @@ function createCelebrationHearts() {
     }
 }
 
-// Add animation for celebration hearts
 const style = document.createElement('style');
 style.textContent = `
     @keyframes celebrateFloat {
